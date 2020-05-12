@@ -1,8 +1,45 @@
+/* soft reset do css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url(background.png);
+    background-image: url('../img/background.png');
     background-size: auto 100vh;
     font-family: arial;
     height: 100vh;
+    font-size: 12px;
+}
+
+/*se a tela tiver pelo menos 400 px vai carregar esses estilos*/
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+/*breakpoints*/
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+h2 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+imagens {
+    align-content: center;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu ul {
@@ -16,6 +53,15 @@ body {
 
 .menu {
     background-color: whitesmoke;
+    position: fixed;
+    width: 100vw;
+    top: 0; /*qualquer valor maior que zero cria distância do topo da página */
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+
 }
 
 a {
@@ -35,6 +81,15 @@ a:hover {
     text-align: center;
 }
 
+.site-title {
+    font-size: 4em;
+}
+
 .site-subtitle {
     font-style: italic;
+}
+
+.img-portfolio {
+    height: 100px;
+    width: 100px;
 }
