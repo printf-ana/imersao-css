@@ -8,7 +8,8 @@
 body {
     background-image: url(background.png);
     background-size: auto 100vh;
-    font-family: arial;
+    font-family: 'Libre Baskerville', serif;
+    color: whitesmoke;
     height: 100vh;
     font-size: 12px;
 }
@@ -26,18 +27,9 @@ body {
     }
 }
 
-h2 {
-    color: whitesmoke;
-    text-align: center;
-}
-
-imagens {
-    align-content: center;
-}
-
 header {
     height: 100vh;
-    display: flex;
+    display: flex; /*flex força tudo a ser coluna, mas não se importa sobre quebras e quantidade de linhas relacionadas a essas quebras*/
     justify-content: center;
     align-items: center;
 }
@@ -83,13 +75,56 @@ a:hover {
 
 .site-title {
     font-size: 4em;
+    font-family: 'Dancing Script', cursive;
 }
 
 .site-subtitle {
     font-style: italic;
+    font-family: 'Amatic SC', cursive;
 }
 
-.img-portfolio {
-    height: 100px;
-    width: 100px;
+.redes {
+        padding: 2em;
+        height: 100vh;
 }
+
+.redes h2 {
+    color: whitesmoke;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.redes .grid {
+    display: grid;
+    gap: 4em;
+    grid-template-columns: 260px 260px 260px 260px;
+}
+
+@media (min-widht: 560px) {
+    .redes .grid {
+        grid-template-columns: 240px 240px; /*quantidade de colunas*/
+    }
+}
+
+@media (min-widht: 880px) {
+    .redes .grid {
+        grid-template-columns: repeat(3, 260px); /*quantidade de colunas*/
+        justify-content: center;
+        align-content: center;
+        height: calc(100vh - 8em - 48px);
+    }
+}
+
+.redes figure {
+    text-align: center; /*poderia ficar no grid. mas é bom aqui para ficar específco*/
+}
+
+.img-redes {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+
