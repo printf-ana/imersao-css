@@ -21,6 +21,11 @@ body {
     }
 }
 /*breakpoints*/
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
 @media (min-width: 1200px) {
     body {
         font-size: 20px;
@@ -34,6 +39,13 @@ header {
     align-items: center;
 }
 
+.menu {
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100vw;
+    top: 0; /*qualquer valor maior que zero cria distância do topo da página */
+}
+
 .menu ul {
     display: flex;
     justify-content: space-around;
@@ -41,13 +53,6 @@ header {
 
 .menu li {
     list-style: none;
-}
-
-.menu {
-    background-color: whitesmoke;
-    position: fixed;
-    width: 100vw;
-    top: 0; /*qualquer valor maior que zero cria distância do topo da página */
 }
 
 .menu a {
@@ -58,8 +63,6 @@ header {
 
 a {
     color: teal;
-    font-style: italic;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -81,6 +84,7 @@ a:hover {
 .site-subtitle {
     font-style: italic;
     font-family: 'Amatic SC', cursive;
+    line-height: 1.8em;
 }
 
 .redes {
@@ -98,19 +102,18 @@ a:hover {
 
 .redes .grid {
     display: grid;
-    gap: 4em;
-    grid-template-columns: 260px 260px 260px 260px;
+    gap: 2em;
 }
 
-@media (min-widht: 560px) {
+@media (min-width: 560px) {
     .redes .grid {
         grid-template-columns: 240px 240px; /*quantidade de colunas*/
     }
 }
 
-@media (min-widht: 880px) {
+@media (min-width: 880px) {
     .redes .grid {
-        grid-template-columns: repeat(3, 260px); /*quantidade de colunas*/
+        grid-template-columns: repeat(4, 260px); /*quantidade de colunas*/
         justify-content: center;
         align-content: center;
         height: calc(100vh - 8em - 48px);
