@@ -87,17 +87,48 @@ a:hover {
     line-height: 1.8em;
 }
 
-.redes {
-        padding: 2em;
-        height: 100vh;
+.projetos {
+    padding: 2em;
+    height: 140vh;
+    
 }
 
-.redes h2 {
+.redes {
+    padding: 2em;
+    height: 100vh;
+}
+
+.projetos h2 {
+    text-align: center;
+    margin-bottom: 5em;
+    font-size: 2em;
+}
+
+.redes h3 {
     color: whitesmoke;
     font-family: 'Libre Baskerville', serif;
     text-align: center;
-    margin-bottom: 1.5em;
+    margin-bottom: -1.5em;
     font-size: 2em;
+}
+
+.projetos .grid {
+    display: grid;
+    gap: 2em;
+}
+@media (min-width: 560px) {
+    .projetos .grid {
+        grid-template-columns: 240px 240px; /*quantidade de colunas*/
+    }
+}
+
+@media (min-width: 880px) {
+    .projetos .grid {
+        grid-template-columns: repeat(2, 450px); /*quantidade de colunas*/
+        justify-content: center;
+        align-content: center;
+        height: calc(100vh - 8em - 48px);
+    }
 }
 
 .redes .grid {
@@ -120,8 +151,19 @@ a:hover {
     }
 }
 
+.projetos figure{
+    text-align: center;
+}
+
 .redes figure {
     text-align: center; /*poderia ficar no grid. mas é bom aqui para ficar específco*/
+}
+
+.img-projetos {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+
 }
 
 .img-redes {
@@ -129,5 +171,3 @@ a:hover {
     width: 200px;
     object-fit: cover;
 }
-
-
