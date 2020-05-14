@@ -32,6 +32,10 @@ body {
     }
 }
 
+.h2 {
+    display: block;
+}
+
 header {
     height: 100vh;
     display: flex; /*flex força tudo a ser coluna, mas não se importa sobre quebras e quantidade de linhas relacionadas a essas quebras*/
@@ -39,11 +43,31 @@ header {
     align-items: center;
 }
 
+.titulos {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+
+    animation: linear 2s animacaotitulo forwards;
+}
+
+@keyframes animacaotitulo {
+
+    0% {
+
+    }
+    100%{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+
+}
+
 .menu {
     background-color: whitesmoke;
     position: fixed;
     width: 100vw;
     top: 0; /*qualquer valor maior que zero cria distância do topo da página */
+    z-index: 1;
 }
 
 .menu ul {
@@ -58,16 +82,18 @@ header {
 .menu a {
     display: block;
     padding: 10px 20px;
+    transition: background-color 1s, colo2 2s;
+}
 
+.menu a:active,
+.menu a:hover {
+    background-color: teal;
+    color: whitesmoke;
 }
 
 a {
     color: teal;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .site-subtitle,
@@ -87,28 +113,14 @@ a:hover {
     line-height: 1.8em;
 }
 
-.projetos {
+.projetos, .contato {
     padding: 2em;
-    height: 140vh;
-    
+    min-height: 100vh;    
 }
 
-.redes {
-    padding: 2em;
-    height: 100vh;
-}
-
-.projetos h2 {
+.projetos h2, .contato h2 {
     text-align: center;
-    margin-bottom: 5em;
-    font-size: 2em;
-}
-
-.redes h3 {
-    color: whitesmoke;
-    font-family: 'Libre Baskerville', serif;
-    text-align: center;
-    margin-bottom: -1.5em;
+    margin-bottom: 1.5em;
     font-size: 2em;
 }
 
@@ -116,6 +128,7 @@ a:hover {
     display: grid;
     gap: 2em;
 }
+
 @media (min-width: 560px) {
     .projetos .grid {
         grid-template-columns: 240px 240px; /*quantidade de colunas*/
@@ -127,27 +140,6 @@ a:hover {
         grid-template-columns: repeat(2, 450px); /*quantidade de colunas*/
         justify-content: center;
         align-content: center;
-        height: calc(100vh - 8em - 48px);
-    }
-}
-
-.redes .grid {
-    display: grid;
-    gap: 2em;
-}
-
-@media (min-width: 560px) {
-    .redes .grid {
-        grid-template-columns: 240px 240px; /*quantidade de colunas*/
-    }
-}
-
-@media (min-width: 880px) {
-    .redes .grid {
-        grid-template-columns: repeat(4, 260px); /*quantidade de colunas*/
-        justify-content: center;
-        align-content: center;
-        height: calc(100vh - 8em - 48px);
     }
 }
 
@@ -155,19 +147,28 @@ a:hover {
     text-align: center;
 }
 
-.redes figure {
-    text-align: center; /*poderia ficar no grid. mas é bom aqui para ficar específco*/
-}
-
 .img-projetos {
     height: 300px;
     width: 300px;
     object-fit: cover;
-
+    transition: transform 500ms;
 }
 
-.img-redes {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
+.img-projetos:hover {
+    transform: scale(1.2);
 }
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a {
+    color: whitesmoke;
+    font-size: 4em;
+}
+
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 12px teal;
+}
+
