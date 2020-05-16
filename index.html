@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Carolina</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script:wght@500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b1a4073717.js" crossorigin="anonymous"></script>
 </head>
@@ -15,18 +14,43 @@
 <body>
     <header>
         <nav class="menu">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
+            <ul class="container">
+                <li><a href="#sobre container">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#contato container">Contato</a></li>
             </ul>
         </nav>
         <div class="titulos">
             <h1 class="site-title">Ana Carolina Dias Goulart</h1>
-            <h2 class="site-subtitle">Desenvolvedora Jr.</h2>
+            <h2 class="site-subtitle">Projeto de FullStack Developer</h2>
         </div>
     </header>
-    <section class="projetos" id="projetos">
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+        <figure class="avatar">
+            <img src="int.jpg" class="img-sobre" alt="Ana Carolina">
+        </figure>
+        <p> 
+            Ana Carolina Dias goulart, graduanda de Licenciatura em Computação, pelo Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro.    
+        </p>
+
+        <p>
+            Pesquisadora bolsista da área de Pessoas com Necessidades Específicas do IFRJ, já tendo apresentado projetos na área de Direitos Humanos com: Direitos Humanos e o Cenário Educacional, Processos de Inclusão, e no Congresso Nacional de Educação, EDUCERE, com o tema: Representações Sociais sobre os Direitos Humanos e o Cenário Educacional.    
+        </p>
+
+        <p>
+            Colaboradora de projetos de extensão envolvendo Robótica Educacional, voltado principalmente para o uso do Arduino e de suas propriedades educacionais, mas também envolvendo o desenvolvimento de Tecnologias Assistivas.
+        </p>
+
+        <p>
+            Também envolvida indiretamente em projetos e estudos sobre Data Science, Inteligência Artifical e Machine Learning, com um certo conhecimento significativo em Banco de Dados. Apesar de ser front-end, também tirando um tempo para aprender os príncipios do front nesse site.
+        </p>
+
+        <p>
+            Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css"> #ImersãoCSS </a> da Alura. 
+        </p>
+        </section>
+    <section class="projetos container" id="projetos">
         <h2>Projetos</h2>
 
         <div class="grid">
@@ -35,11 +59,11 @@
                 <figcaption>EDUCERE</figcaption>
             </figure>
             <figure>
-                <img class="img-projetos" src="int.jpg" alt="INT">
-                <figcaption>INT</figcaption>
+                <img class="img-projetos" src="nissan.jpg" alt="Nissan">
+                <figcaption>Apresentação de Projeto</figcaption>
             </figure>
             <figure>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6607296128440385536/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BW3GH71N5TJeDFge6h%2FLcHQ%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-featured_item_detail_view"><img class="img-projetos" src="nissan.jpg" alt="Nissan"></a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6607296128440385536/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BW3GH71N5TJeDFge6h%2FLcHQ%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-featured_item_detail_view"><img class="img-projetos" src="0.jpg" alt="Nissan"></a>
                 <figcaption>Inova-San</figcaption>
             </figure>
             <figure>
@@ -50,7 +74,7 @@
         
     </section>
 
-    <section id="contato" class="contato">
+    <section id="contato container" class="contato">
         <h2>Contato</h2>
         <div class="grid icons">
 

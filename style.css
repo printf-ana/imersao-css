@@ -7,8 +7,8 @@
 
 body {
     background-image: url(background.png);
-    background-size: auto 100vh;
-    font-family: 'Libre Baskerville', serif;
+    background-size: auto 130vh;
+    font-family: 'Lora', serif;
     color: whitesmoke;
     height: 100vh;
     font-size: 12px;
@@ -87,41 +87,77 @@ header {
 
 .menu a:active,
 .menu a:hover {
-    background-color: teal;
+    background-color: black;
     color: whitesmoke;
 }
 
 a {
-    color: teal;
+    color:black;
     text-decoration: none;
 }
 
 .site-subtitle,
 .site-title {
-    color: whitesmoke;
+    color: white;
     text-align: center;
 }
 
 .site-title {
     font-size: 4em;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Lora', serif;
+    text-shadow: -1px 0 black, 0 1px black,
+    1px 0 black, 0 -1px black
 }
 
 .site-subtitle {
-    font-style: italic;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Lora', serif;
     line-height: 1.8em;
+    text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black
 }
 
-.projetos, .contato {
+.sobre,
+.projetos,  
+.contato {
     padding: 2em;
-    min-height: 100vh;    
+    min-height: 110vh;  
+    margin-left: auto;
+    margin-right: auto;   
 }
 
-.projetos h2, .contato h2 {
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto; 
+}
+}
+
+.sobre a {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.sobre .avatar {
+    float:left;
+    margin-right: 4em;
+}
+
+.sobre h2,
+.projetos h2,
+.contato h2 {
     text-align: center;
     margin-bottom: 1.5em;
     font-size: 2em;
+    text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black
+}
+
+.sobre p {
+    color: whitesmoke;
+    text-indent: 1em;
+    margin-bottom: 1em;
+    text-align: left;
 }
 
 .projetos .grid {
@@ -147,6 +183,13 @@ a {
     text-align: center;
 }
 
+.img-sobre {
+    height: 480px;
+    width: 340px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); /*https://bennettfeely.com/clippy/ */
+    object-fit: cover;
+}
+
 .img-projetos {
     height: 300px;
     width: 300px;
@@ -169,6 +212,6 @@ a {
 
 .contato a:hover {
     text-decoration: none;
-    text-shadow: 0px 0px 12px teal;
+    text-shadow: 0px 0px 12px whitesmoke;
 }
 
