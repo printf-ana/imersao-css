@@ -7,7 +7,7 @@
 
 body {
     background-image: url(background.png);
-    background-size: auto 130vh;
+    background-size: auto 140vh;
     font-family: 'Lora', serif;
     color: whitesmoke;
     height: 100vh;
@@ -47,9 +47,9 @@ header {
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
 
-    animation: linear 2s animacaotitulo forwards;
+    animation: ease 1s animacaotitulo forwards;
 }
-
+    
 @keyframes animacaotitulo {
 
     0% {
@@ -63,10 +63,10 @@ header {
 }
 
 .menu {
-    background-color: whitesmoke;
+    background-color:  #083859;
     position: fixed;
     width: 100vw;
-    top: 0; /*qualquer valor maior que zero cria distância do topo da página */
+    top: 0; /*qualquer valor maior que zero cria distância do topo da página     lightsteelblue */
     z-index: 1;
 }
 
@@ -87,19 +87,22 @@ header {
 
 .menu a:active,
 .menu a:hover {
-    background-color: black;
-    color: whitesmoke;
+    background-color: white;
+    color:  #083859;
+    text-decoration: bold;
 }
 
 a {
-    color:black;
+    color:white;
     text-decoration: none;
 }
 
 .site-subtitle,
 .site-title {
     color: white;
-    text-align: center;
+    float: right;
+    margin-right: 4em;
+    text-align: end;
 }
 
 .site-title {
@@ -154,7 +157,7 @@ a {
 }
 
 .sobre p {
-    color: whitesmoke;
+    color:white;
     text-indent: 1em;
     margin-bottom: 1em;
     text-align: left;
