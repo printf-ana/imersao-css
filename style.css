@@ -46,16 +46,15 @@ header {
 .titulos {
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
-
-    animation: ease 1s animacaotitulo forwards;
+    animation: 1s ease 500ms animacaotitulo forwards;
 }
     
 @keyframes animacaotitulo {
-
-    0% {
-
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
     }
-    100%{
+    to {
         transform: scale(1) translateY(0);
         opacity: 1;
     }
@@ -100,9 +99,8 @@ a {
 .site-subtitle,
 .site-title {
     color: white;
-    float: right;
-    margin-right: 4em;
-    text-align: end;
+    text-align: center;
+    float: center;
 }
 
 .site-title {
